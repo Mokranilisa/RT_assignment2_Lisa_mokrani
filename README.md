@@ -67,7 +67,15 @@ Follow these steps to install and set up the project:
         - **`control.py`**: Sends target positions to the robot.
         - **`last_target_service.py`**: Monitors and provides the last received target coordinates.
         - Other existing nodes for wall following, point-to-point movement, and action services.
-
+3. Use:
+    - To call the node `/last_target`
+    ```bash
+    rosservice call /last_target
+    ```
+    - To reveal the x,y position & velocity of the robot use:
+    ```bash
+    rostopic list echo /vel_pos
+    ```
 ---
 
 ## Features
@@ -103,16 +111,3 @@ Follow these steps to install and set up the project:
     - Subscribes to `/last_target` for the most recent coordinates.
 - **Output**:
     - Returns the last target coordinates when requested through the `/last_target` service.
-
----
-
-## Launch File Overview
-
-The main launch file `assignment1.launch` orchestrates the entire system:
-- Includes the `sim_w1.launch` simulation environment.
-- Sets parameters for robot control (e.g., initial position and frequency).
-- Launches all necessary nodes:
-  - Wall-following and point-to-point movement services.
-  - Action service for higher-level goal handling.
-  - New control and monitoring services (`control.py` and `last_target_service.py`).
-
