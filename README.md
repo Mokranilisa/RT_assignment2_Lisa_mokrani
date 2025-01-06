@@ -7,7 +7,7 @@ This project demonstrates a small yet functional system in ROS (Robot Operating 
 
 The system is implemented to interact seamlessly in a simulation environment, using custom ROS nodes and services.
 <p align="center">
-<img src="gif.gif" alt="Demo of the system" width="200"><img src="gif.gif" alt="Demo of the system" width="300">
+<img src="gif.gif" alt="Demo of the system" width="300">
 </p>
 
 ---
