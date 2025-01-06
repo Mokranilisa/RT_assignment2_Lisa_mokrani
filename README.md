@@ -1,5 +1,8 @@
 # ROS Assignment 2: Control and Monitoring Simulation Project
 
+Name: Mokrani Lisa.
+ID: ............
+
 - This branch `main` representa the part 1 of the second RT assignement.
 - Switch branch to `ROS2` to access to part 2 of the assignement 
 
@@ -8,9 +11,9 @@ The **part 1** demonstrates showcasing robotic control and state monitoring usin
 1. **Sending target positions to the robot using `control.py`.**
 2. **Monitoring the last target received through the `last_target_service.py` service.**
 
-The system is implemented to interact seamlessly in a simulation environment, using custom ROS nodes and services.
+The system is implemented to interact seamlessly in a simulation environment, using custom ROS nodes and services as shown below:
 <p align="center">
-<img src="result.gif" alt="Demo of the system" width="800">
+<img src="result.gif" alt="Demo of the system" width="900">
 </p>
 
 ---
