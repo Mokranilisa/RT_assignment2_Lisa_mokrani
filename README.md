@@ -101,7 +101,7 @@ Follow these steps to install and set up the project:
 - **Input**:
     - Target positions specified by the user (e.g., `x=3.0`, `y=5.0`).
 - **Output**:
-    - Publishes the goal to `/move_base_simple/goal`.
+    - Publishes the goal to `/reaching_goal/goal`.
     - Confirms goal sent.
 
 ---
