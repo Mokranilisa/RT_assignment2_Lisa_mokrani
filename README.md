@@ -9,7 +9,7 @@ ID: ............
 
 The **part 1** demonstrates showcasing robotic control and state monitoring using custom scripts in **ROS 1**. The project includes the following functionalities:
 
-1. **Sending target positions to the robot using `control.py`.**
+1. **Sending target positions to the robot using `control.py` also publishing costum message (cor_x, cor_y, vel_x, vel_y) as position & velocity.**
 2. **Monitoring the last target received through the `last_target_service.py` service.**
 
 The system is implemented to interact seamlessly in a simulation environment, using custom ROS nodes and services as shown below:
