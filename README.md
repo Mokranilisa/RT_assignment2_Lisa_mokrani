@@ -1,6 +1,9 @@
 # ROS Assignment 2: Control and Monitoring Simulation Project
 
-This project demonstrates a small yet functional system in ROS (Robot Operating System), showcasing robotic control and state monitoring using custom scripts. The project includes the following functionalities:
+- This branch `main` representa the part 1 of the second RT assignement.
+- Switch branch to `ROS2` to access to part 2 of the assignement 
+
+The **part 1** demonstrates a small yet functional system in ROS (Robot Operating System), showcasing robotic control and state monitoring using custom scripts. The project includes the following functionalities:
 
 1. **Sending target positions to the robot using `control.py`.**
 2. **Monitoring the last target received through the `last_target_service.py` service.**
