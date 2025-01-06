@@ -30,7 +30,7 @@ Follow these steps to install and set up the project:
 1. **Clone the Repository**:
     ```bash
     cd ~/catkin_ws/src
-    git clone https://github.com/<your_repo>/assignment_2_2024.git
+    git clone https://github.com/Mokranilisa/RT_assignment2_Lisa_mokrani/tree/main
     ```
 
 2. **Make Python Scripts Executable**:
@@ -116,37 +116,3 @@ The main launch file `assignment1.launch` orchestrates the entire system:
   - Action service for higher-level goal handling.
   - New control and monitoring services (`control.py` and `last_target_service.py`).
 
----
-
-## Troubleshooting
-
-### Common Issues:
-1. **ROS Package Not Found**:
-   - Ensure the package is located in the `src` folder of your workspace.
-   - Run `catkin_make` and source your workspace.
-
-2. **Node Execution Issues**:
-   - Confirm scripts have execution permissions (`chmod +x`).
-
-3. **Service or Topic Not Working**:
-   - Verify active nodes and topics using:
-     ```bash
-     rosnode list
-     rostopic list
-     ```
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Future Improvements
-
-- Add error handling for invalid user inputs in `control.py`.
-- Extend the monitoring service to include timestamps or additional statistics.
-- Implement real-time visualization of robot movement and target tracking.
-
-This project provides a foundational framework for robotic control and state monitoring, ideal for learning and extending further functionalities in ROS.
