@@ -72,11 +72,15 @@ Follow these steps to install and set up the project:
         - **`last_target_service.py`**: Monitors and provides the last received target coordinates.
         - Other existing nodes for wall following, point-to-point movement, and action services.
 3. Use:
+
     - To call the node `/last_target`
+
     ```bash
     rosservice call /last_target
     ```
+   
     - To reveal the x,y position & velocity of the robot use:
+
     ```bash
     rostopic list echo /vel_pos
     ```
