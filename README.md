@@ -4,7 +4,7 @@ Name: Mokrani Lisa.
 
 ID: ............
 
-- This branch `main` representa the part 1 of the second RT assignement.
+- This branch `main` represents the part 1 of the second RT assignement.
 - Switch branch to `ROS2` to access to part 2 of the assignement 
 
 The **part 1** demonstrates showcasing robotic control and state monitoring using custom scripts in **ROS 1**. The project includes the following functionalities:
