@@ -1,4 +1,4 @@
-# ROS Assignment 2: Control and Monitoring Simulation Project
+# RT Assignment 2°: 
 
 Name: Mokrani Lisa.
 
