@@ -6,7 +6,7 @@ Welcome to `ROS2` branch. In case you would like to access **Part1** branch swit
 This part 2 ROS 2 package implements a simple behavior for a robot to move around in the environment. The node subscribes to odometry data from the `/odom` topic, checks if the robot's position is within predefined boundaries, and publishes velocity commands to the `/cmd_vel` topic to keep the robot within the allowed area.
 
 <p align="center">
-<img src="result1.gif" alt="Demo of the system" width="900">
+<img src="result1.gif" alt="Demo of the system" width="750">
 </p>
 ---
 
