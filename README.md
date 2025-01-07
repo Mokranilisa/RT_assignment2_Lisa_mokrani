@@ -14,7 +14,7 @@ The **part 1** demonstrates showcasing robotic control and state monitoring usin
 
 The system is implemented to interact seamlessly in a simulation environment, using custom ROS nodes and services as shown below:
 <p align="center">
-<img src="result.gif" alt="Demo of the system" width="750">
+<img src="result.gif" alt="Demo of the system" width="800">
 </p>
 
 ---
