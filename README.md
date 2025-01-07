@@ -46,10 +46,6 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
 
 ## Usage
 
-### Prerequisites:
-- ROS 2 installed on your system.
-- A robot or simulation environment (e.g., Gazebo) publishing to `/odom` and subscribing to `/cmd_vel`.
-
 ### Steps:
 1. Clone this repository into your ROS 2 workspace:
    ```bash
