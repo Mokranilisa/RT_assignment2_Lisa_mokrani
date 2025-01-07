@@ -8,6 +8,7 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
 <p align="center">
 <img src="result1.gif" alt="Demo of the system" width="750">
 </p>
+
 ---
 
 ## Features
