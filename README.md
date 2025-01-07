@@ -1,105 +1,82 @@
-Here’s a simple `README.md` file for your ROS 2 project. It explains the purpose of the project, how to set it up, and how to run it.
 
-```markdown
-# Boundary Avoidance Robot in ROS 2
+# Assignemnet 2 Part 2
 
-This ROS 2 project implements a simple boundary avoidance behavior for a robot in a square-shaped environment. The robot moves freely within the boundaries and turns away when it gets close to the edges of the defined area.
+Welcome to `ROS2` branch. In case you would like to access **Part1** branch switch to `main`.
+
+This part 2 ROS 2 package implements a simple behavior for a robot to move around in the environment. The node subscribes to odometry data from the `/odom` topic, checks if the robot's position is within predefined boundaries, and publishes velocity commands to the `/cmd_vel` topic to keep the robot within the allowed area.
+
+<p align="center">
+<img src="result1.gif" alt="Demo of the system" width="900">
+</p>
+---
+
+## Features
+
+- **Boundary Detection**: The node monitors the robot's position and ensures it stays within a square boundary defined by `±8.0` units in both the `x` and `y` directions.
+- **Proactive Behavior**:
+  - If the robot is within bounds, it moves straight forward at a constant linear velocity.
+  - If the robot approaches or exceeds the boundaries, it rotates to return to the allowed area.
+- **Customizable Threshold**: The boundary threshold is set to `8.0` by default, but it can be modified in the code.
 
 ---
 
-## **Features**
-- Robot moves straight within the field.
-- Robot rotates when it gets close to the boundaries (defined thresholds).
-- Reactive navigation using `/odom` data.
+## Topics
+
+### Subscribed Topics:
+- **`/odom`**: 
+  - Message Type: `nav_msgs/Odometry`
+  - Used to read the robot's current position in the environment.
+
+### Published Topics:
+- **`/cmd_vel`**:
+  - Message Type: `geometry_msgs/Twist`
+  - Used to control the robot's linear and angular velocities.
 
 ---
 
-## **Environment Setup**
-The robot operates in a square environment:
-- Boundaries: `-10 < x < 10` and `-10 < y < 10`
-- Thresholds for turning: `-8 < x < 8` and `-8 < y < 8`
+## How It Works
+
+1. The robot's position is monitored using data from the `/odom` topic.
+2. If the robot's position stays within the defined boundary (e.g., `-8.0 <= x, y <= 8.0`), the robot moves forward in a straight line.
+3. If the robot's position crosses the boundary, it stops moving forward and rotates in place to return to the allowed area.
+4. Velocity commands are continuously published to the `/cmd_vel` topic.
 
 ---
 
-## **Repository Structure**
-```
-robot_urdf/
-├── launch/
-│   └── boundary_avoidance.launch.py   # Launch file to start the robot and the boundary avoidance node
-├── urdf/
-│   └── robot4.xacro                   # URDF/Xacro description of the robot
-├── scripts/
-│   └── boundary_avoidance.py          # Python script for boundary avoidance behavior
-├── worlds/
-│   └── empty.world                    # Gazebo world
-├── config/
-│   └── rviz.rviz                      # RViz configuration file
-└── README.md                          # Project documentation
-```
+## Usage
 
----
+### Prerequisites:
+- ROS 2 installed on your system.
+- A robot or simulation environment (e.g., Gazebo) publishing to `/odom` and subscribing to `/cmd_vel`.
 
-## **Installation**
-
-1. **Clone the repository:**
+### Steps:
+1. Clone this repository into your ROS 2 workspace:
    ```bash
-   git clone https://github.com/<your-username>/boundary-avoidance-robot.git
-   cd boundary-avoidance-robot
+   cd ~/ros2_ws/src
+   git clone <repository-url>
    ```
-
-2. **Build the package:**
+2. Build the workspace:
    ```bash
+   cd ~/ros2_ws
    colcon build
    ```
-
-3. **Source the workspace:**
+3. Source the workspace:
    ```bash
    source install/setup.bash
    ```
-
----
-
-## **Running the Project**
-
-1. **Start Gazebo and RViz:**
-   Launch the robot model in the environment using the following command:
+4. Run the node:
    ```bash
-   ros2 launch robot_urdf boundary_avoidance.launch.py
+   ros2 run <package_name> boundary_avoidance
    ```
 
-2. **Control the robot:**
-   The `boundary_avoidance.py` node will automatically control the robot based on its position in the environment.
-
 ---
 
-## **Node Details**
-### `boundary_avoidance.py`
-- **Purpose:** Ensures the robot avoids boundaries by adjusting its linear and angular velocities.
-- **Subscribed Topics:**
-  - `/odom`: Reads the robot's current position.
-- **Published Topics:**
-  - `/cmd_vel`: Sends velocity commands to the robot.
+## Parameters
+
+- **`threshold`**: Defines the size of the square boundary around the origin (`x=0, y=0`) that the robot must stay within. Default is `8.0`.
 
 ---
+## Author
 
-## **Simulation Tools**
-- **Gazebo**: Simulates the robot and the environment.
-- **RViz**: Visualizes the robot's movements and its real-time position.
-
----
-
-## **License**
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## **Contact**
-For questions or issues, feel free to contact:
-- **Name:** [Your Name]
-- **Email:** [Your Email]
-- **GitHub:** [Your GitHub Profile]
-
----
-```
-
-Feel free to replace placeholders like `<your-username>` or `[Your Name]` with your actual details!
+Mokrani Lisa
+ID: 
