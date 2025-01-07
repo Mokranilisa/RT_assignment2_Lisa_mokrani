@@ -54,7 +54,7 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
 1. Clone this repository into your ROS 2 workspace:
    ```bash
    cd ~/ros2_ws/src
-   git clone https://github.com/Mokranilisa/RT_assignment2_Lisa_mokrani/edit/ros2
+   git clone https://github.com/Mokranilisa/RT_assignment2_Lisa_mokrani/ros2
    ```
 2. Build the workspace:
    ```bash
@@ -69,12 +69,6 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
    ```bash
    ros2 launch robot_urdf gezebo.launch.py
    ```
-
----
-
-## Parameters
-
-- **`threshold`**: Defines the size of the square boundary around the origin (`x=0, y=0`) that the robot must stay within. Default is `8.0`.
 
 ---
 ## Author
