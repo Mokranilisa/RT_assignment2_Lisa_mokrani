@@ -38,7 +38,7 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
 ## How It Works
 
 1. The robot's position is monitored using data from the `/odom` topic.
-2. If the robot's position stays within the defined boundary (e.g., `-8.0 <= x, y <= 8.0`), the robot moves forward in a straight line.
+2. If the robot's position stays within the defined boundary (e.g., `8.0 <= |x|,  8.0 <= |y|`), the robot moves forward in a straight line.
 3. If the robot's position crosses the boundary, it stops moving forward and rotates in place to return to the allowed area.
 4. Velocity commands are continuously published to the `/cmd_vel` topic.
 
