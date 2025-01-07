@@ -53,7 +53,7 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
 1. Clone this repository into your ROS 2 workspace:
    ```bash
    cd ~/ros2_ws/src
-   git clone <repository-url>
+   git clone https://github.com/Mokranilisa/RT_assignment2_Lisa_mokrani/edit/ros2
    ```
 2. Build the workspace:
    ```bash
@@ -66,7 +66,7 @@ This part 2 ROS 2 package implements a simple behavior for a robot to move aroun
    ```
 4. Run the node:
    ```bash
-   ros2 run <package_name> boundary_avoidance
+   ros2 launch robot_urdf gezebo.launch.py
    ```
 
 ---
