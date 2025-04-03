@@ -18,7 +18,7 @@ last_target_x = None
 last_target_y = None
 
 def target_callback(msg):
-   """
+    """
     Callback function that updates the last received target position.
 
     Args:
@@ -29,7 +29,7 @@ def target_callback(msg):
     last_target_x = msg.data[0]
     last_target_y = msg.data[1]
 def handle_last_target_request(req):
-"""
+    """
     Service handler that returns the last known target position.
 
     Args:
@@ -49,7 +49,7 @@ def handle_last_target_request(req):
         message=f"Last target coordinates: x={last_target_x}, y={last_target_y}"  # Show the coords
     )
 def main():
-"""
+    """
     Initializes the ROS service node.
 
     - Subscribes to `/last_target` to update target coordinates.

@@ -18,7 +18,7 @@ from geometry_msgs.msg import Point, Pose, Twist
 from std_msgs.msg import Float32MultiArray
 
 def publisher(msg):
-"""
+    """
     Publishes the robot's velocity and position from the Odometry message.
 
     Args:
@@ -48,7 +48,7 @@ def publisher(msg):
     
 # Action client function to interact with the /reaching_goal action server
 def action_client():
-"""
+    """
     Action client function to send goal positions to the `/reaching_goal` action server.
 
     Continuously asks for user input to set target positions or cancel goals.
@@ -89,7 +89,7 @@ def action_client():
 
 # Main function to initialize everything
 def main():
-"""
+    """
     Initializes the ROS node, publishers, and subscribers.
 
     - Publishes velocity and position to `/vel_pos`

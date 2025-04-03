@@ -1,6 +1,10 @@
-assignment_2_2024
-=================
+Modules
+=======
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
+   :caption: Module Contents:
+
+   control
+   last_target_service
 
