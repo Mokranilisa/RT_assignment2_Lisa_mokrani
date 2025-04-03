@@ -1,4 +1,14 @@
 #!/usr/bin/env python
+
+"""
+Control Module
+
+This module controls the robot's movement and sends goals to the action server.
+
+Author: Lisa Mokrani
+Date: March 2025
+"""
+
 import rospy
 import actionlib
 from assignment_2_2024.msg import PlanningGoal, PlanningAction
@@ -7,8 +17,20 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Point, Pose, Twist
 from std_msgs.msg import Float32MultiArray
 
-# Publisher function that will send the position and velocity to /vel_pos
 def publisher(msg):
+"""
+    Publishes the robot's velocity and position from the Odometry message.
+
+    Args:
+        msg (Odometry): The Odometry message containing position and velocity data.
+
+    Publishes:
+        vel_pos: A custom message containing:
+            - cor_x (float): X position.
+            - cor_y (float): Y position.
+            - vel_x (float): Linear velocity in X direction.
+            - vel_y (float): Linear velocity in Y direction.
+    """
     global pub
     # Get the position information from the Odometry message
     pos = msg.pose.pose.position
@@ -23,8 +45,17 @@ def publisher(msg):
     velpos.vel_y = velocity.y
     # Publish the message to /vel_pos so that other nodes cann use it
     pub.publish(velpos)
+    
 # Action client function to interact with the /reaching_goal action server
 def action_client():
+"""
+    Action client function to send goal positions to the `/reaching_goal` action server.
+
+    Continuously asks for user input to set target positions or cancel goals.
+
+    Publishes:
+        Float32MultiArray: The last target position for tracking.
+    """
     global target_pub
     # Here we create the action client that will talk to /reaching_goal action server
     action_client = actionlib.SimpleActionClient('/reaching_goal', PlanningAction)
@@ -58,6 +89,14 @@ def action_client():
 
 # Main function to initialize everything
 def main():
+"""
+    Initializes the ROS node, publishers, and subscribers.
+
+    - Publishes velocity and position to `/vel_pos`
+    - Publishes last target position to `/last_target`
+    - Subscribes to `/odom` to receive Odometry messages
+    - Starts the action client for goal setting
+    """
     global pub, target_pub
     # Start the ROS node
     rospy.init_node('control')
@@ -73,4 +112,7 @@ def main():
 if __name__ == "__main__":
     # This will run the main function to start the whole process
     main()
+
+
+
 
