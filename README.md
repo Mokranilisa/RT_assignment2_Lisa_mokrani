@@ -2,8 +2,6 @@
 
 Name: Mokrani Lisa.
 
-This repository contains my submission for **Assignment 2** of the **Research Track II** course.
-
 ---
 
 ## 📁 Structure
