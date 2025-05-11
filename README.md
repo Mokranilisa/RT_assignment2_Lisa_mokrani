@@ -8,7 +8,7 @@ This repository contains my submission for **Assignment 2** of the **Research Tr
 
 ## 📁 Structure
 
-- `assignment_2.ipynb`: Final Jupyter Notebook (located in the `final_notebook` branch)
+- `assignment_2.ipynb`: Final Jupyter Notebook (located in the `jupyter_notebook` branch)
 - `assignment_2_2024/`: ROS package with action server and supporting scripts( description of the package in the main branch)
 
 ---
